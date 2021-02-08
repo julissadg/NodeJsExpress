@@ -4,6 +4,9 @@ import * as path from 'path';
 
 export const db = new Sequelize({
     dialect: config.database.DB_DIALECT,
+    dialectOptions:{
+        ssl:true
+    },
     host: config.database.DB_HOST,
     port: Number(config.database.DB_PORT),
     username: config.database.DB_USER,

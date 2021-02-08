@@ -43,6 +43,10 @@ const router: Router = Router();
  *              message: Email already exists
  */
 router.get('/users', UserFacade.findAll);
+router.post('/user', UserFacade.create);
+router.put('/user',UserFacade.update);
+router.delete('/user',UserFacade.destroy);
+router.get('/user/:id',UserFacade.findAllbyID);
 
 /**
  * GET method route
@@ -80,8 +84,8 @@ router.get('/users', UserFacade.findAll);
  *              logged: false
  *              message: Email already exists
  */
-router.get('/ping', async (req, res) => {
-    res.send('pong');
+router.get('/Hola', async (req, res) => {
+    res.send('Hola desde Servicio manejado por Kubernetes');
 });
 
 /**
